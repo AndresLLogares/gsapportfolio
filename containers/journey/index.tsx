@@ -1,11 +1,19 @@
 "use client";
 
-import { Suspense, lazy } from "react";
-const CursorComponent = lazy(() => import("../../components/cursor"));
-const LayoutComponent = lazy(() => import("../../components/layout"));
-const MenuComponent = lazy(() => import("../../components/navbar"));
-const LoadingComponent = lazy(() => import("../../components/loading"));
-const VerticalTimelineComponent = lazy(
+import { Suspense } from "react";
+import dynamic from "next/dynamic";
+import LoadingComponent from "../../components/loading";
+const CursorComponent = dynamic(() => import("../../components/cursor"), {
+  loading: () => <LoadingComponent />,
+});
+const LayoutComponent = dynamic(() => import("../../components/layout"), {
+  loading: () => <LoadingComponent />,
+});
+const MenuComponent = dynamic(() => import("../../components/navbar"), {
+  loading: () => <LoadingComponent />,
+});
+
+const VerticalTimelineComponent = dynamic(
   () => import("../../components/journey")
 );
 import { items } from "@/enums";
@@ -14,11 +22,9 @@ import { paletteColors } from "@/styles/colors";
 const JourneyContainer = () => {
   return (
     <LayoutComponent $backcolor={paletteColors.white}>
-      <Suspense fallback={<LoadingComponent />}>
-        <CursorComponent />
-        <MenuComponent items={items} />
-        <VerticalTimelineComponent />
-      </Suspense>
+      <CursorComponent />
+      <MenuComponent items={items} />
+      <VerticalTimelineComponent />
     </LayoutComponent>
   );
 };

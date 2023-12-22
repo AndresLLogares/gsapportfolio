@@ -2,36 +2,50 @@
 import { AboutEnum, items } from "@/enums";
 import { paletteColors } from "@/styles/colors";
 import { ContainerMain } from "@/styles/main";
-import { Suspense, lazy } from "react";
-const CursorComponent = lazy(() => import("../../components/cursor"));
-const LayoutComponent = lazy(() => import("../../components/layout"));
-const MenuComponent = lazy(() => import("../../components/navbar"));
-const LoadingComponent = lazy(() => import("../../components/loading"));
-const NameComponent = lazy(() => import("../../components/name"));
-const TextComponent = lazy(() => import("../../components/textAbout"));
-const ContactComponent = lazy(() => import("../../components/contact"));
-const InformationComponent = lazy(() => import("../../components/information"));
+import { Suspense } from "react";
+import dynamic from "next/dynamic";
+import LoadingComponent from "../../components/loading";
+const CursorComponent = dynamic(() => import("../../components/cursor"), {
+  loading: () => <LoadingComponent />,
+});
+const LayoutComponent = dynamic(() => import("../../components/layout"), {
+  loading: () => <LoadingComponent />,
+});
+const MenuComponent = dynamic(() => import("../../components/navbar"), {
+  loading: () => <LoadingComponent />,
+});
+
+const NameComponent = dynamic(() => import("../../components/name"), {
+  loading: () => <LoadingComponent />,
+});
+const TextComponent = dynamic(() => import("../../components/textAbout"), {
+  loading: () => <LoadingComponent />,
+});
+const ContactComponent = dynamic(() => import("../../components/contact"), {
+  loading: () => <LoadingComponent />,
+});
+const InformationComponent = dynamic(
+  () => import("../../components/information")
+);
 
 const MainContainer = () => {
   return (
     <LayoutComponent $backcolor={paletteColors.white}>
-      <Suspense fallback={<LoadingComponent />}>
-        <CursorComponent />
-        <MenuComponent items={items} />
-        <ContainerMain>
-          <NameComponent />
-          <TextComponent />
-          <ContactComponent />
-          <InformationComponent
-            $title={AboutEnum.TitleJourney}
-            $content={AboutEnum.TextJourney}
-          />
-          <InformationComponent
-            $title={AboutEnum.TitleProfessionalEthos}
-            $content={AboutEnum.TextProfessionalEthos}
-          />
-        </ContainerMain>
-      </Suspense>
+      <CursorComponent />
+      <MenuComponent items={items} />
+      <ContainerMain>
+        <NameComponent />
+        <TextComponent />
+        <ContactComponent />
+        <InformationComponent
+          $title={AboutEnum.TitleJourney}
+          $content={AboutEnum.TextJourney}
+        />
+        <InformationComponent
+          $title={AboutEnum.TitleProfessionalEthos}
+          $content={AboutEnum.TextProfessionalEthos}
+        />
+      </ContainerMain>
     </LayoutComponent>
   );
 };
