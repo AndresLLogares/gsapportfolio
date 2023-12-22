@@ -1,7 +1,6 @@
 "use client";
 import React, { useRef, useState, useEffect, createRef } from "react";
 import gsap from "gsap";
-import { paletteColors } from "@/styles/colors";
 import { ButtonStyled, IndicatorStyled, MenuStyled } from "@/styles/navbar";
 import { animatePageOut } from "@/animations";
 import { useRouter, usePathname } from "next/navigation";
@@ -12,7 +11,7 @@ const MenuComponent: React.FC<{ items: typeof items }> = ({ items }) => {
   const $root = useRef<HTMLDivElement>(null);
   const $indicator1 = useRef<HTMLDivElement>(null);
   const $indicator2 = useRef<HTMLDivElement>(null);
-  const $items = useRef(items.map(() => createRef<HTMLAnchorElement>()));
+  const $items = useRef(items.map(() => createRef<HTMLButtonElement>()));
   const [active, setActive] = useState(0);
   const router = useRouter();
   const currentURL = usePathname();

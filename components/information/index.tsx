@@ -1,3 +1,4 @@
+"use client";
 import { WrapperProps } from "@/enums";
 import {
   InformationContainer,

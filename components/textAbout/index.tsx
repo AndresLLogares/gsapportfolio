@@ -1,3 +1,4 @@
+"use client";
 import { AboutEnum } from "@/enums";
 import { TextContainer, TextStyled } from "@/styles/main";
 
