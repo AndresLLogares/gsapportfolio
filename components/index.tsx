@@ -1,0 +1,9 @@
+export { default as LayoutComponent } from "./layout";
+export { default as CursorComponent } from "./cursor";
+export { default as NameComponent } from "./name";
+export { default as TransitionComponent } from "./transition";
+export { default as TextComponent } from "./textAbout";
+export { default as ContactComponent } from "./contact";
+export { default as InformationComponent } from "./information";
+export { default as MenuComponent } from "./navbar";
+export { default as TechnologiesComponent } from "./technologies";
