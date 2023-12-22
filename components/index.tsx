@@ -7,3 +7,4 @@ export { default as ContactComponent } from "./contact";
 export { default as InformationComponent } from "./information";
 export { default as MenuComponent } from "./navbar";
 export { default as TechnologiesComponent } from "./technologies";
+export { default as VerticalTimelineComponent } from "./journey";

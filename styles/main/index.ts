@@ -79,7 +79,7 @@ export const TitleInformation = styled.h3`
   }
 `;
 
-export const TextStyled = styled.p`
+export const TextStyled = styled.h5`
   display: flex;
   font-family: ${fontFamily.cousine};
   font-size: ${fontSizes.textWeb};

@@ -35,7 +35,9 @@ export const SubTitleCardTimeline = styled.h4<{
       : paletteColors.white};
 `;
 
-export const TextCardTimeline = styled.p<{ $textcolorselected: string | null }>`
+export const TextCardTimeline = styled.h5<{
+  $textcolorselected: string | null;
+}>`
   font-size: ${fontSizes.textWeb};
   font-family: ${fontFamily.cousine};
   margin: 0;

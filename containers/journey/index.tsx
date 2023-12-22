@@ -1,21 +1,11 @@
 "use client";
 
-import { Suspense } from "react";
-import dynamic from "next/dynamic";
-import LoadingComponent from "../../components/loading";
-const CursorComponent = dynamic(() => import("../../components/cursor"), {
-  loading: () => <LoadingComponent />,
-});
-const LayoutComponent = dynamic(() => import("../../components/layout"), {
-  loading: () => <LoadingComponent />,
-});
-const MenuComponent = dynamic(() => import("../../components/navbar"), {
-  loading: () => <LoadingComponent />,
-});
-
-const VerticalTimelineComponent = dynamic(
-  () => import("../../components/journey")
-);
+import {
+  CursorComponent,
+  LayoutComponent,
+  MenuComponent,
+  VerticalTimelineComponent,
+} from "@/components";
 import { items } from "@/enums";
 import { paletteColors } from "@/styles/colors";
 

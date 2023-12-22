@@ -1,11 +1,15 @@
+"use client";
+import { paletteColors } from "@/styles/colors";
 import { Spinner, Box } from "@/styles/loading";
-import React from "react";
+import { LayoutComponent } from "..";
 
 const LoadingComponent = () => {
   return (
-    <Box>
-      <Spinner />
-    </Box>
+    <LayoutComponent $backcolor={paletteColors.white}>
+      <Box>
+        <Spinner />
+      </Box>
+    </LayoutComponent>
   );
 };
 

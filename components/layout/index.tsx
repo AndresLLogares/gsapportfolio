@@ -1,8 +1,6 @@
 "use client";
 import { WrapperProps } from "@/enums";
-import { paletteColors } from "@/styles/colors";
 import { LayoutStyled } from "@/styles/layout";
-import CursorStyle from "../cursor";
 
 const LayoutComponent = (props: WrapperProps) => {
   return (
