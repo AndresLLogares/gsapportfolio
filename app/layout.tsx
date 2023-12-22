@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Andres Logares",
-  description: "Persona Web Page using Next.js + GSAP",
+  description: "Personal Web Page using Next.js + GSAP",
 };
 
 export default function RootLayout({

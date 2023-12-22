@@ -1,21 +1,24 @@
 "use client";
 
-import {
-  CursorComponent,
-  InformationComponent,
-  LayoutComponent,
-  MenuComponent,
-} from "@/components";
-import { VerticalTimelineComponent } from "@/components/journey";
-import { AboutEnum, WrapperProps, items } from "@/enums";
+import { Suspense, lazy } from "react";
+const CursorComponent = lazy(() => import("../../components/cursor"));
+const LayoutComponent = lazy(() => import("../../components/layout"));
+const MenuComponent = lazy(() => import("../../components/navbar"));
+const LoadingComponent = lazy(() => import("../../components/loading"));
+const VerticalTimelineComponent = lazy(
+  () => import("../../components/journey")
+);
+import { items } from "@/enums";
 import { paletteColors } from "@/styles/colors";
 
 const JourneyContainer = () => {
   return (
     <LayoutComponent $backcolor={paletteColors.white}>
-      <CursorComponent />
-      <MenuComponent items={items} />
-      <VerticalTimelineComponent />
+      <Suspense fallback={<LoadingComponent />}>
+        <CursorComponent />
+        <MenuComponent items={items} />
+        <VerticalTimelineComponent />
+      </Suspense>
     </LayoutComponent>
   );
 };
