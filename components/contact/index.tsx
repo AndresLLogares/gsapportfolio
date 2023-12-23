@@ -7,7 +7,6 @@ import {
   AiOutlineWhatsApp,
   AiOutlineMail,
 } from "react-icons/ai";
-
 const ContactComponent = () => {
   return (
     <ContactContainer>
@@ -25,7 +24,7 @@ const ContactComponent = () => {
       >
         <AiFillLinkedin size={25} color={paletteColors.black} />
       </LinkStyled>
-      <LinkStyled>
+      <LinkStyled href={"/Resume.pdf"} download>
         <AiFillFileText size={25} color={paletteColors.black} />
       </LinkStyled>
       <LinkStyled
