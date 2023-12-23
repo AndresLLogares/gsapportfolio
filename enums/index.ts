@@ -31,16 +31,16 @@ export const items = [
     label: "Journey ->",
   },
   {
-    name: "Technologies",
-    color: `${paletteColors.orange}`,
-    href: enumsPath.technologies,
-    label: "Technologies ->",
-  },
-  {
     name: "Home",
     color: `${paletteColors.darkGrey}`,
     href: enumsPath.home,
     label: "Home ->",
+  },
+  {
+    name: "Technologies",
+    color: `${paletteColors.orange}`,
+    href: enumsPath.technologies,
+    label: "Technologies ->",
   },
 ];
 
