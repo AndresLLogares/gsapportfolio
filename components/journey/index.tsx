@@ -15,7 +15,7 @@ import "react-vertical-timeline-component/style.min.css";
 
 const VerticalTimelineComponent = () => {
   return (
-    <VerticalTimeline>
+    <VerticalTimeline visible={true}>
       <VerticalTimelineElement
         visible={true}
         className="vertical-timeline-element--work"
