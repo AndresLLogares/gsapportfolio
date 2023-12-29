@@ -3,26 +3,26 @@ import styled from "styled-components";
 import { paletteColors } from "../colors";
 
 export const StyledBall = styled.div`
-  width: 50px;
+  border-radius: 50%;
+  border: 2px solid ${paletteColors.orange};
   height: 50px;
+  left: 0;
   position: fixed;
   top: 0;
-  left: 0;
-  border: 2px solid ${paletteColors.orange};
-  border-radius: 50%;
+  width: 50px;
   @media (max-width: 1024px) {
     display: none;
   }
 `;
 
 export const StyledPointer = styled.div`
-  width: 10px;
-  height: 10px;
-  position: fixed;
-  top: 0;
-  left: 0;
   background-color: ${paletteColors.black};
   border-radius: 50%;
+  height: 10px;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 10px;
   @media (max-width: 1024px) {
     display: none;
   }

@@ -3,12 +3,12 @@ const cousine = Cousine({ subsets: ["latin"], weight: "700" });
 const Exo2 = Exo_2({ subsets: ["latin"] });
 
 export const fontSizes = {
-  titleWeb: "40px",
-  titleMobile: "30px",
-  subTitleWeb: "25px",
   subTitleMobile: "15px",
-  textWeb: "15px",
+  subTitleWeb: "25px",
   textMobile: "15px",
+  textWeb: "15px",
+  titleMobile: "30px",
+  titleWeb: "40px",
 };
 
 export const fontFamily = {

@@ -1,6 +1,5 @@
 "use client";
 import { AboutEnum, items } from "@/enums";
-import { paletteColors } from "@/styles/colors";
 import { ContainerMain } from "@/styles/main";
 import {
   CursorComponent,
@@ -11,6 +10,8 @@ import {
   TextComponent,
   ContactComponent,
 } from "@/components";
+import { paletteColors } from "@/styles/colors";
+
 const MainContainer = () => {
   return (
     <LayoutComponent $backcolor={paletteColors.white}>

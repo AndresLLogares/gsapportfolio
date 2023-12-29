@@ -1,7 +1,7 @@
 "use client";
+import { LayoutComponent } from "..";
 import { paletteColors } from "@/styles/colors";
 import { Spinner, Box } from "@/styles/loading";
-import { LayoutComponent } from "..";
 
 const LoadingComponent = () => {
   return (

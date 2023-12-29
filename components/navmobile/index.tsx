@@ -1,14 +1,14 @@
 "use client";
+import { animatePageOut } from "@/animations";
+import { AnimatePresence, motion } from "framer-motion";
+import { enumsPath, items } from "@/enums";
+import { fontFamily, fontSizes } from "@/styles/fonts";
+import { paletteColors } from "@/styles/colors";
+import { Squash as Hamburger } from "hamburger-react";
 import { useClickAway } from "react-use";
+import { usePathname, useRouter } from "next/navigation";
 import { useRef } from "react";
 import { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
-import { Squash as Hamburger } from "hamburger-react";
-import { enumsPath, items } from "@/enums";
-import { paletteColors } from "@/styles/colors";
-import { fontFamily, fontSizes } from "@/styles/fonts";
-import { animatePageOut } from "@/animations";
-import { usePathname, useRouter } from "next/navigation";
 
 const NavMobile = () => {
   const [isOpen, setOpen] = useState(false);

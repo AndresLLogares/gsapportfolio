@@ -1,6 +1,6 @@
 "use client";
-import { WrapperProps } from "@/enums";
 import { LayoutStyled } from "@/styles/layout";
+import { WrapperProps } from "@/enums";
 
 const LayoutComponent = (props: WrapperProps) => {
   return (

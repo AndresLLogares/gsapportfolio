@@ -1,10 +1,10 @@
 "use client";
-import { WrapperProps } from "@/enums";
 import {
   InformationContainer,
   TextStyled,
   TitleInformation,
 } from "@/styles/main";
+import { WrapperProps } from "@/enums";
 
 const InformationComponent = (props: WrapperProps) => {
   return (

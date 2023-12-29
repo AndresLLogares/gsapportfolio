@@ -1,23 +1,22 @@
 "use client";
+import "react-vertical-timeline-component/style.min.css";
 import { ExperienceEnum } from "@/enums";
+import { FaBriefcase } from "react-icons/fa6";
 import { paletteColors } from "@/styles/colors";
 import {
   TitleCardTimeline,
   SubTitleCardTimeline,
   TextCardTimeline,
 } from "@/styles/journey";
-import { FaBriefcase } from "react-icons/fa6";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
-import "react-vertical-timeline-component/style.min.css";
 
 const VerticalTimelineComponent = () => {
   return (
     <VerticalTimeline visible={true}>
       <VerticalTimelineElement
-        visible={true}
         className="vertical-timeline-element--work"
         contentStyle={{
           background: `${paletteColors.black}`,
@@ -31,6 +30,7 @@ const VerticalTimelineComponent = () => {
           color: `${paletteColors.black}`,
         }}
         icon={<FaBriefcase />}
+        visible={true}
       >
         <TitleCardTimeline $textcolorselected={null}>
           {ExperienceEnum.Accenture}
@@ -53,7 +53,6 @@ const VerticalTimelineComponent = () => {
       </VerticalTimelineElement>
 
       <VerticalTimelineElement
-        visible={true}
         className="vertical-timeline-element--work"
         contentStyle={{
           background: `${paletteColors.lightGrey}`,
@@ -67,6 +66,7 @@ const VerticalTimelineComponent = () => {
           color: `${paletteColors.white}`,
         }}
         icon={<FaBriefcase />}
+        visible={true}
       >
         <TitleCardTimeline $textcolorselected={paletteColors.black}>
           {ExperienceEnum.ALT}
@@ -89,7 +89,6 @@ const VerticalTimelineComponent = () => {
       </VerticalTimelineElement>
 
       <VerticalTimelineElement
-        visible={true}
         className="vertical-timeline-element--work"
         contentStyle={{
           background: `${paletteColors.black}`,
@@ -103,6 +102,7 @@ const VerticalTimelineComponent = () => {
           color: `${paletteColors.black}`,
         }}
         icon={<FaBriefcase />}
+        visible={true}
       >
         <TitleCardTimeline $textcolorselected={null}>
           {ExperienceEnum.OCTOSOFT}

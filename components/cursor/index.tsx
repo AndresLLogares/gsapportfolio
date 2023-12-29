@@ -1,7 +1,7 @@
 "use client";
-import { useEffect } from "react";
 import { gsap } from "gsap";
 import { StyledBall, StyledPointer } from "../../styles/cursor";
+import { useEffect } from "react";
 
 const CursorComponent = () => {
   useEffect(() => {
@@ -10,11 +10,11 @@ const CursorComponent = () => {
     window.addEventListener("mousemove", (e) => {
       gsap.to(targets, {
         duration: 0.5,
-        x: e.clientX,
-        y: e.clientY,
         ease: "back.out",
         overwrite: "auto",
         stagger: 0.02,
+        x: e.clientX,
+        y: e.clientY,
       });
     });
   }, []);

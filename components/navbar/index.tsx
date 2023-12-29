@@ -1,10 +1,10 @@
 "use client";
 import React, { useRef, useState, useEffect, createRef } from "react";
-import gsap from "gsap";
-import { ButtonStyled, IndicatorStyled, MenuStyled } from "@/styles/navbar";
 import { animatePageOut } from "@/animations";
-import { useRouter, usePathname } from "next/navigation";
+import { ButtonStyled, IndicatorStyled, MenuStyled } from "@/styles/navbar";
 import { enumsPath, items } from "@/enums";
+import { useRouter, usePathname } from "next/navigation";
+import gsap from "gsap";
 import NavMobile from "../navmobile";
 
 const MenuComponent: React.FC<{ items: typeof items }> = ({ items }) => {

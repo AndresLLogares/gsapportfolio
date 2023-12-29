@@ -3,23 +3,23 @@ import { paletteColors } from "../colors";
 import { fontSizes, fontFamily } from "../fonts";
 
 export const ContainerMain = styled.main`
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  height: 100%;
   justify-content: center;
   width: 100%;
-  height: 100%;
   z-index: 2;
 `;
 
 export const TextContainer = styled.div`
+  align-items: center;
   display: flex;
-  width: 50%;
   height: fit-content;
   justify-content: center;
-  align-items: center;
-  margin: 0;
   margin-bottom: 3vh;
+  margin: 0;
+  width: 50%;
   @media (max-width: 1024px) {
     width: 90%;
     margin-top: 2vh;
@@ -27,13 +27,13 @@ export const TextContainer = styled.div`
 `;
 
 export const ContactContainer = styled.div`
+  align-items: center;
   display: flex;
-  width: 50%;
   height: fit-content;
   justify-content: center;
-  align-items: center;
-  margin: 0;
   margin-bottom: 3vh;
+  margin: 0;
+  width: 50%;
   @media (max-width: 1024px) {
     flex-wrap: wrap;
     width: 90%;

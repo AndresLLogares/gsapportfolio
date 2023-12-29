@@ -3,17 +3,17 @@
 import { FaReact, FaNodeJs, FaGithub, FaHtml5, FaCss3 } from "react-icons/fa6";
 import { IoLogoJavascript } from "react-icons/io5";
 import {
-  SiRedux,
-  SiExpress,
   SiApollographql,
-  SiGraphql,
-  SiMongodb,
-  SiNextdotjs,
-  SiNestjs,
-  SiTypescript,
+  SiExpress,
   SiGatsby,
+  SiGraphql,
   SiMaterialdesign,
+  SiMongodb,
+  SiNestjs,
+  SiNextdotjs,
+  SiRedux,
   SiSolidity,
+  SiTypescript,
 } from "react-icons/si";
 import { TechnologiesEnum } from "@/enums";
 import {

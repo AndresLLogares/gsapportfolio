@@ -3,16 +3,16 @@ import { paletteColors } from "../colors";
 import { fontSizes, fontFamily } from "../fonts";
 
 export const MenuStyled = styled.div`
-  display: flex;
-  justify-content: space-around;
   align-items: center;
-  position: relative;
-  z-index: 1;
-  padding: 10px;
-  width: 90%;
-  margin: 0;
   border-bottom: 1px solid ${paletteColors.orange};
+  display: flex;
   flex-direction: row;
+  justify-content: space-around;
+  margin: 0;
+  padding: 10px;
+  position: relative;
+  width: 90%;
+  z-index: 1;
   @media (max-width: 1024px) {
     flex-direction: column;
     align-items: center;
@@ -22,17 +22,17 @@ export const MenuStyled = styled.div`
 `;
 
 export const ButtonStyled = styled.button`
-  padding: 18px 28px;
-  cursor: pointer;
-  transition: color 0.3s ease-out;
-  text-decoration: none;
   color: ${paletteColors.black};
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+  cursor: pointer;
+  font-family: ${fontFamily.cousine};
   font-size: ${fontSizes.textWeb};
   font-weight: bold;
+  letter-spacing: 0.05em;
   margin: 5px 0;
-  font-family: ${fontFamily.cousine};
+  padding: 18px 28px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.3s ease-out;
   &.active {
     color: ${paletteColors.white};
   }
@@ -43,9 +43,9 @@ export const ButtonStyled = styled.button`
 `;
 
 export const IndicatorStyled = styled.div`
+  border-radius: 30px;
+  left: 0;
   position: absolute;
   top: 0;
-  left: 0;
   z-index: -1;
-  border-radius: 30px;
 `;
